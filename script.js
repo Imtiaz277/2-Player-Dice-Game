@@ -82,7 +82,11 @@ function rollDice(){
     
     if(randomNumber === 1){
         resetScore();
-        switchPlayer();
+        disableButtons();
+        setTimeout(function(){
+            enableButtons();
+            switchPlayer();
+        }, 2000);
     }
     else{
         addCurrentScore(randomNumber);
