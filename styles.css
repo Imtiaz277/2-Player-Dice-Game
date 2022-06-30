@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+:root{
+    --primary-color: #3755C8;
+    --secondary-color: #5F77D3;
+    --letter-spacing: 0.3rem;
+    --letter-spacing-big: 1rem;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+    height: 100%;
+}
+
+body{
+    font-family: 'Nunito', sans-serif;
+    height: 100%;
+    background-image: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding: 2rem;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.container{
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 1rem 1rem 2rem rgba(34, 34, 34, 0.3);
+}
+
+.player{
+    padding: 10rem 3rem;
+    background-color: rgba(255, 255, 255, 0.6);
+    text-align: center;
+    width: 70rem;
+    position: relative;
+}
+
+.not-active{
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.player-title{
+    color: #222;
+    font-size: 5rem;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: var(--letter-spacing);
+}
+
+.total-score{
+    color: var(--primary-color);
+    font-size: 7rem;
+    margin-bottom: 17rem;
+}
+
+.score-container{
+    background-color: var(--primary-color);
+    padding: 2rem 0;
+    width: 25rem;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 0.5rem;
+}
+
+.score-title, .score{
+    color: #fff;
+}
+
+.score-title{
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    letter-spacing: var(--letter-spacing);
+}
+
+.score{
+    font-size: 4rem;
+}
+
+.btns-container{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-around;
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateX(50%);
+}
+
+.btn{
+    text-transform: uppercase;
+    font-size: 2rem;
+    border: none;
+    border-radius: 9999px;
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 2.5rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn:hover{
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.btn:active{
+    background-color: lightgrey;
+}
+
+.btn-disable{
+    opacity: 0.4;
+}
+
+.img{
+    height: 15rem;
+    width: 15rem;
+}
+
+/* Media queries */
+
+/* 112.4375em = 1800px */
+@media(min-width: 112.5em){
+    html{ font-size: 80%; }
+}
+
+/* 87.5em = 1400px */
+@media(max-width: 87.5em){
+    html{ font-size: 53%; }
+}
+
+/* 75em = 1200px */
+@media(max-width: 75em){
+    html{ 
+        font-size: 50%;
+        height: fit-content;
+    }
+
+    body{
+        height: fit-content;
+    }
+
+    .container{
+        flex-direction: column;
+        position: static;
+        transform: translate(0, 0);
+        width: 100%;
+    }
+
+    .player{
+        width: 100%;
+        padding: 20rem 3rem;
+    }
+
+    .btns-container{
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+        top: unset;
+        bottom: 0;
+        right: 0;
+        transform: translate(0, 50%);
+    }
+
+    .btn{
+        padding: 2rem 1rem;
+    }
+    
+}
+
+/* 56.25em = 900px */
+@media(max-width: 56.25em){
+    html{ font-size: 45%; }
+}
+
+/* 37.5em = 600px */
+@media(max-width: 37.5em){
+    html{ font-size: 40%; }
+}
+
+/* 31.25em = 500px */
+@media(max-width: 31.25em){
+  html{ font-size: 30%; }
+}
